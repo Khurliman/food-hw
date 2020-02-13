@@ -246,6 +246,12 @@ a {
     position: absolute;
     color: #fff;
 }
+.lvl {
+    animation: levels 2s 3;
+}
+.lvl_color {
+    color: red;
+}
 .button {
     position: fixed;
     bottom: 0;
@@ -310,6 +316,24 @@ a {
     text-align: center;
     font-size: 25px;
     margin: 10px 0;
+}
+
+@keyframes levels {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(0.5);
+    }
+    50% {
+        transform: scale(2);
+    }
+    75% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 

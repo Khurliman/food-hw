@@ -176,3 +176,24 @@ receiptBtn.addEventListener('click', function() {
 
 
 /* *********************************************************** */
+const timerExtra = document.querySelector('.header__timer-extra'),
+      timer = document.querySelector('.header__timer'),
+      timerText = document.querySelector('.header__timer-text');
+
+let i = 1;
+function level() {
+    if(i < 80) {
+        timerExtra.innerHTML = i;
+        i++;  
+        setTimeout(() => level(), 10);
+    }else if(i < 101) {
+        timerExtra.innerHTML = i;
+        i++;  
+        setTimeout(() => level(), 100);
+    }
+    if(i == 100) {
+        timer.classList.add('lvl');
+    }
+}
+level();
+
